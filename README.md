@@ -1,4 +1,4 @@
-## .NET Core API Serverless with 3Scale, Service Mesh and Postgres database.
+## .NET Core API Serverless with 3Scale, Service Mesh and Postgres database
 
 Demo description and tools used TBD.
 
