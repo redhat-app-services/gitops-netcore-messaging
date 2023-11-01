@@ -6,5 +6,5 @@ commonAnnotations:
 
 resources:
     - ../../operator/overlays/stable
-    - ../../instance/knative-eventing/overlays/default
+    - ../../instance/knative-eventing/overlays/knative-kafka
     - ../../instance/knative-serving/overlays/default
