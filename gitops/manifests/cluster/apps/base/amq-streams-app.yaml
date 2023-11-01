@@ -13,7 +13,7 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    path: gitops/manifests/operators/amq-streams-operator/overlays/stable
+    path: gitops/manifests/operators/amq-streams-operator/aggregate/base
     repoURL: https://github.com/sa-ne/gitops-netcore-messaging.git
     targetRevision: main
   syncPolicy:

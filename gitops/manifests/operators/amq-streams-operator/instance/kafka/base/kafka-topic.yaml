@@ -1,0 +1,15 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: KafkaTopic
+metadata:
+  name: my-topic
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"  
+  labels:
+    strimzi.io/cluster: my-cluster
+  namespace: amq-streams-kafka
+spec:
+  partitions: 10
+  replicas: 3
+  config:
+    retention.ms: 600000
+    segment.bytes: 1073741824
