@@ -1,0 +1,13 @@
+kind: Kustomization
+apiVersion: kustomize.config.k8s.io/v1beta1
+
+commonAnnotations:
+    argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
+
+resources:
+    - namespace.yaml
+    - serviceaccount-secret.yaml
+    - serviceaccount.yaml
+    - rolebinding.yaml
+    - persistentvolumeclaim.yaml
+    - deployment.yaml
