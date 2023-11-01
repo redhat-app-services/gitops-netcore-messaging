@@ -1,0 +1,27 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: cloudbeaver
+    app.kubernetes.io/component: cloudbeaver
+    app.kubernetes.io/instance: cloudbeaver
+  name: cloudbeaver
+  namespace: mssql-client
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      openshift.io/imported-from: dbeaver/cloudbeaver:latest
+    from:
+      kind: DockerImage
+      name: dbeaver/cloudbeaver:latest
+    importPolicy: {}
+    name: latest
+    referencePolicy:
+      type: ""
+status:
+  dockerImageRepository: ""
+

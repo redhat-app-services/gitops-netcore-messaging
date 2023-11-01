@@ -6,10 +6,7 @@ commonAnnotations:
 
 resources:
     - namespace.yaml
-    - serviceaccount-secret.yaml
-    - serviceaccount.yaml
-    - rolebinding.yaml
-    - persistentvolumeclaim.yaml
+    - imagestream.yaml
     - deployment.yaml
     - service.yaml
-    - service-external.yaml
+    - route.yaml

@@ -1,0 +1,35 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    image.openshift.io/triggers: '[{"from":{"kind":"ImageStreamTag","name":"cloudbeaver:latest"},"fieldPath":"spec.template.spec.containers[?(@.name==\"cloudbeaver\")].image"}]'
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: cloudbeaver
+    app.kubernetes.io/component: cloudbeaver
+    app.kubernetes.io/instance: cloudbeaver
+  name: cloudbeaver
+  namespace: mssql-client
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      deployment: cloudbeaver
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      labels:
+        deployment: cloudbeaver
+    spec:
+      containers:
+      - image: ' '
+        name: cloudbeaver
+        ports:
+        - containerPort: 8978
+          protocol: TCP
+        resources: {}
+status: {}
+

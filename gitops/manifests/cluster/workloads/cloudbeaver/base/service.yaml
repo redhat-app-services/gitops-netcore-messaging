@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: cloudbeaver
+    app.kubernetes.io/component: cloudbeaver
+    app.kubernetes.io/instance: cloudbeaver
+  name: cloudbeaver
+  namespace: mssql-client
+spec:
+  ports:
+  - name: 8978-tcp
+    port: 8978
+    protocol: TCP
+    targetPort: 8978
+  selector:
+    deployment: cloudbeaver
+status:
+  loadBalancer: {}

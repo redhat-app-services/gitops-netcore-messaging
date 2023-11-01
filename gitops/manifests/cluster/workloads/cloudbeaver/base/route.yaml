@@ -1,0 +1,16 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: cloudbeaver
+    app.kubernetes.io/component: cloudbeaver
+    app.kubernetes.io/instance: cloudbeaver
+  name: cloudbeaver
+  namespace: msqql-client
+spec:
+  port:
+    targetPort: 8978-tcp
+  to:
+    kind: ""
+    name: cloudbeaver
+status: {}
